@@ -1,0 +1,76 @@
+/*
+ * Newsletter Signup (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.newsletter-signup {
+  @include iPhoneX;
+  // background-color: $offWhite;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .gform_wrapper {
+    form {
+      position: relative;
+      width: 80%;
+
+      input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
+      textarea,
+      select {
+        // height: rem(62);
+        padding-right: rem(175) !important;
+        border-radius: rem(17) !important;
+        // border-color: $white;
+
+        &:active,
+        &:focus {
+          // border-color: $red;
+        }
+      }
+
+      .gform_footer {
+        position: absolute;
+        bottom: rem(10);
+        right: 0;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      input[type="submit"] {
+        margin: 0 !important;
+        min-width: rem(150);
+        // height: rem(62);
+        padding-top: rem(15);
+        padding-bottom: rem(15);
+        border-top-right-radius: rem(17) !important;
+        border-bottom-right-radius: rem(17) !important;
+      }
+    }
+
+    &.gform_validation_error form .gform_footer {
+      bottom: rem(44);
+      right: rem(16);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .newsletter-signup .gform_wrapper {
+    form {
+      width: 100%;
+
+      .gform_footer {
+        bottom: rem(20);
+      }
+    }
+
+    &.gform_validation_error form .gform_footer {
+      right: 0;
+    }
+  }
+}

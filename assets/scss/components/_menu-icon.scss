@@ -1,0 +1,75 @@
+/*------------------------------------------------------------------------------
+  Menu Icon
+------------------------------------------------------------------------------*/
+.menu-icon {
+  display: none;
+  padding: rem(20) rem(10);
+  background: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  z-index: 99999;
+
+  span {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: rem(-8);
+      left: 0;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: rem(8);
+      left: 0;
+    }
+  }
+
+  span,
+  span:before,
+  span:after {
+    display: block;
+    width: rem(30);
+    height: rem(3);
+    // background-color: $white;
+    transform-origin: -4% center;
+    transition: all .4s ease;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    span,
+    span:before,
+    span:after {
+      // background-color: $coral;
+    }
+  }
+
+  // Active styles
+  &.active span {
+    background-color: transparent;
+
+    &:before {
+      top: rem(-11);
+      left: rem(5);
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: rem(11);
+      left: rem(5);
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .menu-icon {
+    display: block;
+  }
+}

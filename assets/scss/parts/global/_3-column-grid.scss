@@ -1,0 +1,45 @@
+/*
+ * 3-Column Grid (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.three-column-grid {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(60) 0 rem(30);
+  }
+
+  .col-12 {
+    margin-bottom: rem(50);
+  }
+
+  .col-4 {
+    margin-bottom: rem(50);
+  }
+
+  &__column {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    // background-color: $lightestGray;
+
+    > div {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__img {
+    padding-bottom: 60%;
+  }
+
+  &__text {
+    padding: rem(30) rem(20) rem(10);
+  }
+
+  .text-center {
+    align-self: flex-end;
+    padding-bottom: rem(30);
+  }
+}

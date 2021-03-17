@@ -1,0 +1,22 @@
+/*
+ * Centered Text Block (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.centered-text-block {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  &__featured-image {
+    width: 100%;
+    margin-bottom: rem(30);
+  }
+
+  .buttons {
+    margin-top: rem(30);
+  }
+}

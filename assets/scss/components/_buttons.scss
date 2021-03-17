@@ -1,0 +1,28 @@
+/*------------------------------------------------------------------------------
+  Buttons
+------------------------------------------------------------------------------*/
+.button {
+  &--primary {
+    // @include buttons($primary, $primary, $white, $primary, transparent, $primary);
+  }
+
+  &--primary-ghost {
+    // @include buttons($primary, transparent, $primary, $primary, $primary, $white);
+  }
+
+  &--secondary {
+    // @include buttons($secondary, $secondary, $white, $secondary, transparent, $secondary);
+  }
+
+  &--secondary-ghost {
+    // @include buttons($secondary, transparent, $secondary, $secondary, $secondary, $white);
+  }
+
+  &--white {
+    // @include buttons($white, $white, $primary, $white, transparent, $white);
+  }
+
+  &--white-ghost {
+    // @include buttons($white, transparent, $white, $white, $white, $primary);
+  }
+}

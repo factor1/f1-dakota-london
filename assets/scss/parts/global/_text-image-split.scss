@@ -1,0 +1,51 @@
+/*
+ * Text/Image Split (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.text-image-split {
+  &.with-margin {
+    margin-top: rem(30);
+    margin-bottom: rem(30);
+  }
+
+  .row--reverse .text-image-split__text {
+    padding-right: rem(12.8);
+    padding-left: rem(30);
+  }
+
+  &__text {
+    max-width: rem(600);
+    padding-top: rem(50);
+    padding-bottom: rem(60);
+    padding-right: rem(30);
+
+    > div {
+      @include iPhoneX;
+    }
+  }
+
+  .button {
+    margin-top: rem(30);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .text-image-split {
+    &__text {
+      max-width: 100%;
+      padding: rem(30) rem(12.8) rem(40) !important;
+    }
+
+    &__image {
+      order: -1;
+      padding-bottom: 50%;
+    }
+
+    .sm-text-center * {
+      text-align: center !important;
+    }
+  }
+}

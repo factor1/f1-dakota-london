@@ -1,0 +1,49 @@
+/*-----------------------------------------------------------------------------
+  Table of Contents
+  - Vendor
+  - Globals
+  - Plugins
+  - Pages
+  - Parts
+  - Components
+-----------------------------------------------------------------------------*/
+// import the Sass partials in the order that you need here
+
+// vendor
+@import "./node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+// Variables
+@import "settings/variables";
+
+// Ginger Grid
+@import "settings/ginger-settings";
+@import "./node_modules/ginger-grid/ginger";
+
+// Slick
+@import 'settings/slick-settings';
+@import './node_modules/slick-carousel/slick/slick.scss';
+
+// Mixins
+@import "mixins/sugar";
+
+// Global Styles
+@import "globals/global";
+@import "globals/wordpress";
+@import "globals/typography";
+
+// Components
+@import "components/nav";
+@import "components/social-menu";
+@import "components/buttons";
+@import "components/menu-icon";
+@import "components/pagination";
+@import "components/forms";
+@import "components/header";
+@import "components/footer";
+
+// Parts
+@import "parts/all";
+
+// Plugin Overrides
+@import "plugins/overrides";

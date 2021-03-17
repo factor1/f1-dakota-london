@@ -1,0 +1,50 @@
+{
+  "name": "f1-dakota-london",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "yarn test && yarn format && SET NODE_ENV=production gulp build && yarn build-js && yarn build-scss",
+    "build-js": "parcel build ./assets/js/theme.js --out-dir ./dist/ --no-content-hash --log-level 4 --public-url ./ --no-cache",
+    "build-scss": "parcel build ./assets/scss/theme.scss --out-dir ./dist/ --no-content-hash --log-level 4 --public-url ./ --no-cache",
+    "format": "prettier *.js *.css --write",
+    "release-major": "yarn test && node ./util/versionUpdate.js --major && yarn build",
+    "release-minor": "yarn test && node ./util/versionUpdate.js --minor && yarn build",
+    "release-patch": "yarn test && node ./util/versionUpdate.js --patch && yarn build",
+    "start": "NODE_ENV=development yarn test && concurrently \"yarn watch-js\" \"yarn watch-scss\" \"gulp serve\"",
+    "test": "eslint .",
+    "watch": "concurrently \"yarn watch-js\" \"yarn watch-scss\"",
+    "watch-js": "parcel watch ./assets/js/theme.js --out-dir ./dist --log-level 4 --public-url ./ --no-hmr --no-cache",
+    "watch-scss": "parcel watch ./assets/scss/theme.scss --out-dir ./dist --log-level 4 --public-url ./ --no-hmr --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bowser": "^2.5.2",
+    "colors": "^1.3.3",
+    "dotenv": "^8.0.0",
+    "fs-extra": "^8.1.0",
+    "ginger-grid": "^2.3.1",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.15",
+    "path": "^0.12.7",
+    "prompt": "^1.0.0",
+    "replace": "^1.1.1",
+    "slick-carousel": "^1.8.1",
+    "slugify": "^1.3.4",
+    "yargs": "^15.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-eslint": "^10.0.3",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.0.2",
+    "eslint": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0",
+    "normalize-scss": "^7.0.1",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "sass": "^1.26.5"
+  }
+}

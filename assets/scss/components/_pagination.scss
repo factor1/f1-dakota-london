@@ -1,0 +1,43 @@
+/*----------------------------------------------------------------------------
+  Pagination
+----------------------------------------------------------------------------*/
+.pagination {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-numbers {
+    width: auto;
+    padding: rem(20);
+    // font: 400 rem(20)/1 $raleway;
+    // color: $black;
+    text-decoration: none;
+  }
+
+  .prev,
+  .next {
+    display: inline-block;
+    width: auto;
+    border-radius: 0;
+    height: auto;
+
+    i {
+      transition: all .4s ease;
+    }
+  }
+
+  a.page-numbers,
+  .prev,
+  .next {
+    &:hover,
+    &:hover i {
+      // color: $coral !important;
+    }
+  }
+
+  span.page-numbers {
+    // color: $black;
+  }
+}

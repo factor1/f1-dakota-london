@@ -1,0 +1,16 @@
+/*----------------------------------------------------------------------------
+  SCSS Parts
+----------------------------------------------------------------------------*/
+// Global
+@import 'global/hero';
+@import 'global/centered-text-block';
+@import 'global/banner';
+@import 'global/slider';
+@import 'global/text-image-split';
+@import 'global/3-column-grid';
+@import 'global/newsletter-signup';
+
+// Blog
+@import 'blog/hero';
+@import 'blog/filters';
+@import 'blog/post-list';

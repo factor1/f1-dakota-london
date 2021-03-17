@@ -1,0 +1,15 @@
+/*
+ * Filters
+ *
+ * Template part used on the media template
+ */
+
+.index--filters {
+  position: relative;
+  @include iPhoneX;
+  // background-color: $offWhite;
+
+  .container {
+    padding: rem(15) 0;
+  }
+}

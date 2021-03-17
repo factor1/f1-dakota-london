@@ -1,0 +1,6 @@
+
+/* Do not change this! This ensures that white text remains visible in admin WYSIWYG editors */
+span[style*="color: #ffffff"],
+span[style*="color: #ffffff;"] {
+  color: #a1abb2 !important;
+}

@@ -1,0 +1,67 @@
+/*
+ * Hero (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.hero {
+  position: relative;
+  @include iPhoneX;
+  overflow: hidden;
+
+  // Hero video
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .container {
+    padding: rem(180) 0;
+    z-index: 1;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .button {
+    // margin: rem(20);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba($black, 0.35);
+  }
+}
+
+// Hide video on mobile devices
+.touch .hero__video,
+.touch .hero__video video {
+  display: none;
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .hero .container {
+    padding: rem(120) 0;
+  }
+}
