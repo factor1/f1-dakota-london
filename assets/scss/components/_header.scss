@@ -32,11 +32,11 @@ body {
 .site-header {
   position: relative;
   @include iPhoneX;
-  // background-color: $blue;
-  z-index: 999999;
+  background-color: $black;
+  z-index: 9999;
 
   .container {
-    padding: rem(20) 0 rem(10);
+    padding: rem(30) 0;
   }
 
   .col-12 {
@@ -46,7 +46,11 @@ body {
   }
 
   &__logo {
-    width: rem(300);
+    width: rem(400);
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -54,5 +58,6 @@ body {
 @media screen and (max-width: $medium-breakpoint) {
   .site-header__logo {
     width: rem(200);
+    margin: 0 0 0 rem(10);
   }
 }

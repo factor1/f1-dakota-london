@@ -20,6 +20,7 @@ if (!(is_admin() )) {
 function prelude_theme_scripts() {
   // Fonts
   wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Bentham&family=PT+Sans&display=swap', array(), THEME_VERSION );
+  
   // Update font awesome with your kit script!!
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/de235ca0c9.js', array(), THEME_VERSION, true);
 

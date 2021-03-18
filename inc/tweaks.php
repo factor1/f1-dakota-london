@@ -187,9 +187,15 @@
   function custom_wysiwyg_options( $init_array ) {
     $style_formats = array(
       array(
-        'title' => 'Callout (White)',
+        'title' => 'Main hero heading',
+  			'block' => 'h1',
+        'classes' => 'main-hero-heading',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Main hero sub heading',
   			'block' => 'h2',
-        'classes' => 'callout--white',
+        'classes' => 'main-hero-subheading',
   			'wrapper' => false,
       ),
     );

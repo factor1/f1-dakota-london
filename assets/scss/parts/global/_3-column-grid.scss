@@ -8,7 +8,7 @@
   @include iPhoneX;
 
   .container {
-    padding: rem(60) 0 rem(30);
+    padding: rem(30) 0;
   }
 
   .col-12 {
@@ -19,11 +19,25 @@
     margin-bottom: rem(50);
   }
 
+  &__separator {
+    &:after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: rem(2);
+      background-color: $white;
+      right: 0;
+      top: 0;
+    }
+    &:last-of-type:after {
+      display: none;
+    }
+  }
+
   &__column {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    // background-color: $lightestGray;
 
     > div {
       flex: 0 1 100%;
@@ -35,7 +49,7 @@
   }
 
   &__text {
-    padding: rem(30) rem(20) rem(10);
+    padding: rem(30) rem(20);
   }
 
   .text-center {

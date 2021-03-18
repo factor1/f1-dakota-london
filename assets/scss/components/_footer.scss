@@ -4,7 +4,7 @@
 .site-footer {
   &__top {
     @include iPhoneX;
-    // background-color: $red;
+    background-color: $black;
 
     .container {
       padding: rem(30) 0;
@@ -24,7 +24,7 @@
 
   &__main {
     @include iPhoneX;
-    // background-color: $black;
+    background-color: $black;
 
     .container {
       padding: rem(85) 0;
