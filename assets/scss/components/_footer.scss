@@ -13,13 +13,19 @@
     .col-12 {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
   }
 
   &__logo {
     width: rem(250);
+    margin: 0 auto;
+  }
+
+  &__content , &__copyright {
+    color: $white;
+    margin: rem(40) 0 0;
   }
 
   &__main {
@@ -44,7 +50,7 @@
 
       a {
         display: block;
-        width: rem(100);
+        width: rem(250);
         margin: 0 auto rem(15);
       }
     }

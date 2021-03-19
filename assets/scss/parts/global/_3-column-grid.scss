@@ -57,3 +57,10 @@
     padding-bottom: rem(30);
   }
 }
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .three-column-grid__separator:after {
+    display: none;
+  }
+}
