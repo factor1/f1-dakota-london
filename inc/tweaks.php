@@ -198,6 +198,12 @@
         'classes' => 'main-hero-subheading',
   			'wrapper' => false,
       ),
+      array(
+        'title' => 'Cursive heading',
+  			'block' => 'h2',
+        'classes' => 'cursive-heading',
+  			'wrapper' => false,
+      ),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats_merge'] = true;

@@ -34,7 +34,7 @@ if( have_rows('3_column_grid') ) : ?>
               <div>
 
                 <?php if( $img ) : ?>
-                  <div class="three-column-grid__img" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
+                  <div class="three-column-grid__img" style="background: url('<?php echo $img[0]; ?>') center/contain no-repeat"></div>
                 <?php endif; ?>
 
                 <div class="three-column-grid__text">

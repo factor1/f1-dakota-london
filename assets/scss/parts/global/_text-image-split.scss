@@ -12,18 +12,32 @@
 
   .row--reverse .text-image-split__text {
     padding-right: rem(12.8);
-    padding-left: rem(30);
+    padding-left: rem(100);
   }
 
   &__text {
-    max-width: rem(600);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    max-width: rem(700);
     padding-top: rem(50);
     padding-bottom: rem(60);
-    padding-right: rem(30);
-
+    padding-right: rem(100);
+    
     > div {
       @include iPhoneX;
+      z-index: 3;
     }
+
+    .backtext {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      font: 500 rem(180)/1.3 $margo;
+      color: #353535;
+      margin-bottom: 20%;
+    }
+
   }
 
   .button {
@@ -48,4 +62,10 @@
       text-align: center !important;
     }
   }
+
+  .text-image-split__text .backtext {
+    font-size: rem(100);
+    top: rem(40);
+  }
+
 }
