@@ -19,7 +19,7 @@ $btnClass = get_sub_field('banner_button_class');
 $btn = get_sub_field('banner_button');
 
 // Conditional classes/styles
-$bgStyle = ' style="background: url(' . $bg[0] . ') ' . $hAlign . ' ' . $vAlign . '/cover no-repeat; padding: ' . $padding . 'px 0;"';
+$bgStyle = ' style="background: #F8F8F8 url(' . $bg[0] . ') ' . $hAlign . ' ' . $vAlign . '/cover no-repeat; padding: ' . $padding . 'px 0;"';
 $sectionStyle = $width ? $bgStyle : '';
 $colStyle = $width ? '' : $bgStyle; ?>
 

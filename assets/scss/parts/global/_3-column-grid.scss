@@ -6,24 +6,56 @@
 
 .three-column-grid {
   @include iPhoneX;
+  position: relative;
+  overflow: hidden;
+
+  .backtext {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font: 500 rem(180)/1.3 $margo;
+    color: #353535;
+    text-align: center;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .container {
-    padding: rem(60) 0 rem(30);
+    padding: rem(40) 0;
+    z-index: 3;
   }
 
   .col-12 {
-    margin-bottom: rem(50);
+    margin: rem(20) 0;
   }
 
   .col-4 {
-    margin-bottom: rem(50);
+    margin: rem(20) 0;
+  }
+
+  &__separator {
+    &:after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: rem(2);
+      background-color: $white;
+      right: 0;
+      top: 0;
+    }
+    &:last-of-type:after {
+      display: none;
+    }
   }
 
   &__column {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    // background-color: $lightestGray;
 
     > div {
       flex: 0 1 100%;
@@ -35,7 +67,7 @@
   }
 
   &__text {
-    padding: rem(30) rem(20) rem(10);
+    padding: rem(30) rem(20);
   }
 
   .text-center {
@@ -43,3 +75,35 @@
     padding-bottom: rem(30);
   }
 }
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .three-column-grid {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    .container {
+      padding: rem(30);
+    }
+  }
+
+  .three-column-grid__text {
+    padding: 0;
+  }
+
+  .three-column-grid__separator:after {
+    height: rem(2);
+    width: 80%;
+    right: 10%;
+    bottom: 0;
+    top: auto;
+  }
+
+}
+
+@media screen and (max-width: $medium-breakpoint) {
+  .three-column-grid .backtext {
+    font-size: rem(120);
+  }
+}
+
+

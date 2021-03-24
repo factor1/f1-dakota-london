@@ -3,6 +3,7 @@
   - make sure to include FontAwesome for this to work!
 ----------------------------------------------------------------------------*/
 .menu-social {
+  margin: rem(50) auto 0;
   ul {
     flex-wrap: wrap;
     margin: 0;
@@ -26,12 +27,12 @@
           -webkit-font-smoothing: antialiased;
           font-family: 'Font Awesome 5 Brands';
           font-weight: 400;
-          font-size: rem(24);
-          // color: $white;
+          font-size: rem(35);
+          color: $white;
           transition: all .4s ease;
         }
         &:hover:before {
-          // color: $lightGray;
+          color: $gray-light;
         }
       } // end anchor
       // Adding the icons

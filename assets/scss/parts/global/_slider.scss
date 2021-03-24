@@ -23,15 +23,29 @@
     }
   }
 
+  &__slider .slick-list {
+    max-width: rem(900);
+    margin: 0 auto;
+  }
+
   &__slide {
     display: block !important;
-    width: calc(100% - 40px) !important;
+    width: calc(100% - 15px) !important;
     height: 100%;
     margin: 0 auto;
     padding: rem(30);
-    border-radius: rem(5);
-    // background-color: $white;
-    // box-shadow: 0 0 rem(20) rgba($lightestGray, 0.3);
+    border: rem(2) solid $black;
+    border-radius: 0;
+    background-color: $white;
+    img {
+      margin: 0 auto;
+    }
+    p {
+      margin-bottom: rem(50);
+    }
+    .cursive-heading {
+      font-size: rem(40);
+    }
   }
 
   .button {
