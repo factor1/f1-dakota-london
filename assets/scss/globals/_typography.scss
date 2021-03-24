@@ -61,13 +61,14 @@ a {
 }
 
 // Typography classes
-
 .main-hero-heading { //h1
   font: 500 rem(100)/1.2 $bentham;
+  text-shadow: 0 rem(5) rem(5) $black;
 }
 
 .main-hero-subheading { //h2
   font: 500 rem(50)/1.2 $ptsans;
+  text-shadow: 0 rem(5) rem(5) $black;
 }
 
 .big-header {//h2
@@ -79,10 +80,52 @@ a {
   text-transform: unset;
 }
 
+.factor1 {
+  font: 700 rem(14)/1 'Helvetica', sans-serif;
+  letter-spacing: -.1em;
+  color: $white;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
+  h1 {
+    font-size: rem(35);
+    margin: 0 0 rem(15);
+  }
+
+  h2 {
+    font-size: rem(28);
+    margin: 0 0 rem(15);
+  }
+
+  h3 {
+    font-size: rem(25);
+    margin: 0 0 rem(15);
+  }
+
+  h4 {
+    font-size: rem(22);
+  }
+
+  h5 {
+    font-size: rem(16);
+  }
+
+  h6 {
+    font-size: rem(14);
+  }
+
+  hr {
+    margin: rem(10) auto;
+    max-width: rem(30);
+  }
+
   .main-hero-heading {
-    font-size: rem(60);
+    font-size: rem(30);
   }
 
   .main-hero-subheading {
@@ -91,6 +134,10 @@ a {
 
   .cursive-heading {
     font-size: rem(50);
+  }
+
+  .big-header {
+    font-size: rem(35);
   }
       
 }

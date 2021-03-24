@@ -2,6 +2,11 @@
   Footer
 ------------------------------------------------------------------------------*/
 .site-footer {
+  
+  li, ol, p, ul {
+    font-size: rem(16);
+  }
+
   &__top {
     @include iPhoneX;
     background-color: $black;
@@ -41,8 +46,13 @@
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .site-footer {
-    &__top .col-12 {
-      justify-content: center;
+    &__top {
+      .container {
+        padding: rem(30);
+      }
+      .col-12 {
+        justify-content: center;
+      }
     }
 
     &__logo {

@@ -24,8 +24,18 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
+  
+  .three-image-section__img-1 img, .three-image-section__img-2 img, .three-image-section__img-3 img {
+    width: 100%;
+    margin-bottom: rem(10);
+  }
+
   .three-image-section .container {
-    padding: rem(60) 0;
+    padding: rem(60) rem(30);
+  }
+
+  .three-image-section__img-2 img {
+    margin-top: 0;
   }
 
   .three-image-section__img-3 img {

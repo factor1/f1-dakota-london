@@ -36,7 +36,7 @@ $content = get_field('footer_content', 'option');
         <?php endif; ?>
 
         <div class="col-12 site-footer__copyright text-center">
-          <p>Copyright ©<?php echo Date('Y'); ?> Dakota London. All Rights Reserved. Site by factor1</p>
+          <p>Copyright ©<?php echo Date('Y'); ?> Dakota London. All Rights Reserved. Site by <a href="https://factor1studios.com/" class="factor1">factor1</a></p>
         </div>
 
       </div>

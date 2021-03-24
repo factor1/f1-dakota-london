@@ -11,7 +11,7 @@
   }
 
   .row--reverse .text-image-split__text {
-    padding-right: rem(12.8);
+    padding-right: rem(100);
     padding-left: rem(100);
   }
 
@@ -23,10 +23,14 @@
     padding-top: rem(80);
     padding-bottom: rem(30);
     padding-right: rem(100);
+    padding-left: rem(100);
     
     > div {
       @include iPhoneX;
       z-index: 3;
+      p {
+        font-family: $bentham;
+      }
     }
 
     .backtext {
@@ -57,12 +61,17 @@
   .text-image-split {
     &__text {
       max-width: 100%;
-      padding: rem(30) rem(12.8) rem(40) !important;
+      padding: rem(100) rem(30) rem(60) !important;
+      min-height: auto;
+      > div {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &__image {
       order: -1;
-      padding-bottom: 50%;
+      padding-bottom: 80%;
     }
 
     .sm-text-center * {
@@ -71,6 +80,7 @@
   }
 
   .text-image-split__text .backtext {
+    left: 0;
     font-size: rem(100);
     top: rem(40);
   }

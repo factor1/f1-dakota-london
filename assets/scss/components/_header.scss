@@ -56,8 +56,19 @@ body {
 
 // Media Queries
 @media screen and (max-width: $medium-breakpoint) {
+  .site-header {
+    .container {
+      padding: rem(20) 0;
+    }
+
+    .col-12 {
+      justify-content: center;
+    }
+
+  }
+
   .site-header__logo {
-    width: rem(200);
+    width: rem(230);
     margin: 0 0 0 rem(10);
   }
 }

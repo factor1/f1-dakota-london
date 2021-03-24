@@ -6,9 +6,27 @@
 
 .three-column-grid {
   @include iPhoneX;
+  position: relative;
+  overflow: hidden;
+
+  .backtext {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font: 500 rem(180)/1.3 $margo;
+    color: #353535;
+    text-align: center;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .container {
     padding: rem(40) 0;
+    z-index: 3;
   }
 
   .col-12 {
@@ -60,7 +78,32 @@
 
 // Media Queries
 @media screen and (max-width: $medium-breakpoint) {
+  .three-column-grid {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    .container {
+      padding: rem(30);
+    }
+  }
+
+  .three-column-grid__text {
+    padding: 0;
+  }
+
   .three-column-grid__separator:after {
-    display: none;
+    height: rem(2);
+    width: 80%;
+    right: 10%;
+    bottom: 0;
+    top: auto;
+  }
+
+}
+
+@media screen and (max-width: $medium-breakpoint) {
+  .three-column-grid .backtext {
+    font-size: rem(120);
   }
 }
+
+

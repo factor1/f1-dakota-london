@@ -16,7 +16,7 @@ textarea,
 select {
   width: 100% !important;
   padding: rem(20) !important;
-  border-radius: rem(4) !important;
+  border-radius: rem(2) !important;
   border: rem(2) solid $white;
   background-color: $white;
   font: 400 rem(20)/1.3 $ptsans !important;
@@ -127,6 +127,11 @@ input[type="radio"] {
   }
 }
 
+//file upload
+.ginput_container_fileupload input {
+  color: $white;
+}
+
 // Submit Button
 input[type="submit"] {
   width: auto !important;
@@ -198,6 +203,7 @@ input[type="submit"] {
     .gform_footer {
       margin: 0 !important;
       padding: 0 !important;
+      text-align: center;
     }
 
     // Active Styles
@@ -226,6 +232,33 @@ input[type="submit"] {
         }
       }
     }
+  }
+
+  .top_label input.medium {
+    width: 100% !important;
+  }
+
+  // file input
+  input[type=file].medium {
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+
+    &::before {
+      content: 'File';
+      display: inline-block;
+      @include buttons($white, transparent, $white, $white, $white, $primary);
+    }
+
+    &:hover::before {
+      background-color: $white;
+      color: $black;
+    }
+
+    &:active::before {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+
   }
 
   // Errors
@@ -269,5 +302,11 @@ input[type="submit"] {
     .half-width {
       flex-basis: 100%;
     }
+  }
+
+  .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit] {
+    width: 100% !important;
+    max-width: rem(270);
+    margin-top: rem(30) !important;
   }
 }

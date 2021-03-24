@@ -16,7 +16,7 @@ $args = array(
 
 $query = new WP_Query( $args ); ?>
 
-<section class="slider-section" style="background: url(<?php echo $bgImage[0]; ?>) center/cover;">
+<section class="slider-section testimonial-slider" style="background: url(<?php echo $bgImage[0]; ?>) center/cover;">
   <div class="container">
     <div class="row">
       <div class="col-12">

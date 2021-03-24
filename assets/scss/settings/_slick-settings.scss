@@ -192,3 +192,18 @@ $slick-opacity-not-active: 0.25 !default;
 
     }
 }
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .slick-dots li{
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+  }
+  .testimonial-slider .slick-next {
+    right: -25px;
+  }
+  .testimonial-slider .slick-prev {
+    left: -25px;
+  }
+}

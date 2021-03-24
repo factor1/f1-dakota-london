@@ -13,6 +13,10 @@
     margin-top: rem(70);
   }
 
+  &__text {
+    padding-left: rem(70);
+  }
+
   &__image img {
     position: absolute;
     bottom: rem(-70);
@@ -23,8 +27,29 @@
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
+
+  .forty-sixty-text-image-split {
+    background-size: 150% !important;
+    background-repeat: repeat !important;
+
+    h2{
+      font-size: rem(40);
+    }
+
+    .container {
+      margin-top: 0;
+      padding-left: rem(30);
+      padding-right: rem(30);
+    }
+  }
+
+  .forty-sixty-text-image-split__text {
+    padding-left: inherit;
+  }
+
   .forty-sixty-text-image-split__image img {
     position: relative;
     bottom: rem(-80);
+    margin-top: rem(-60);
   }
 }

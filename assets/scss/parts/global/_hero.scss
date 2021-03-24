@@ -62,6 +62,6 @@
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .hero .container {
-    padding: rem(120) 0;
+    padding: rem(60) 0 rem(30);
   }
 }

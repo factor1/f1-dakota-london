@@ -8,8 +8,8 @@
 // 3-Column Grid Custom Fields
 $intro = get_sub_field('3_column_grid_intro_content');
 $bgColor = get_sub_field('3_column_grid_background_color');
-$bgImage = wp_get_attachment_image_src(get_sub_field('3_column_grid_background_image'), 'hero');
-$lineClass = count(get_sub_field('3_column_grid')) > 2 ? ' three-column-grid__separator' : '';
+$bgText = get_sub_field('3_column_grid_background_text');
+$lineClass = ( count(get_sub_field('3_column_grid')) > 2 && $bgColor == '#000000' ) ? ' three-column-grid__separator' : '';
 $mainbtnToggle = get_sub_field('3_column_grid_button_toggle');
 $mainbtnAlign = get_sub_field('3_column_grid_button_alignment');
 $mainbtnClass = get_sub_field('3_column_grid_button_class');
@@ -17,7 +17,7 @@ $mainbtn = get_sub_field('3_column_grid_button');
 
 if( have_rows('3_column_grid') ) : ?>
 
-  <section class="three-column-grid" style="background: <?php echo $bgColor; ?> url(<?php echo $bgImage[0]; ?>) center/cover">
+  <section class="three-column-grid" style="background: <?php echo $bgColor; ?>;">
     <div class="container">
       <div class="row row--justify-content-center">
 
@@ -77,6 +77,11 @@ if( have_rows('3_column_grid') ) : ?>
       <?php endif; ?>
 
     </div>
+    <?php if($bgText): ?>
+      <div class="backtext">
+        <?php echo $bgText; ?>
+      </div>
+    <?php endif; ?>
   </section>
 
 <?php endif; ?>
