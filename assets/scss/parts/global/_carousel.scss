@@ -1,0 +1,18 @@
+/*
+ * Carousel (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.carousel {
+  @include iPhoneX;
+  overflow: hidden;
+
+  .container{
+    padding: rem(70) 0 0;
+  }
+
+  &__slide img {
+    margin: 0 auto;
+  }
+}

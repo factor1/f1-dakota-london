@@ -1,0 +1,35 @@
+/*
+ * 3-Image section (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.three-image-section {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(120) 0 rem(170);
+  }
+
+  &__img-2 img {
+    margin-top: rem(20);
+  }
+
+  &__img-3 img {
+    position: absolute;
+    top: rem(-150);
+  }
+
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .three-image-section .container {
+    padding: rem(60) 0;
+  }
+
+  .three-image-section__img-3 img {
+    position: relative;
+    top: auto;
+  }
+}

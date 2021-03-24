@@ -6,8 +6,8 @@ label {
   position: relative;
   left: rem(20);
   padding-right: rem(30) !important;
-  // font: 400 rem(17)/1.41 $raleway !important;
-  // color: $black;
+  font: 500 rem(20)/1.3 $bentham !important;
+  color: $white;
   z-index: 1;
 }
 
@@ -17,16 +17,16 @@ select {
   width: 100% !important;
   padding: rem(20) !important;
   border-radius: rem(4) !important;
-  // border: rem(2) solid $blue;
-  background-color: transparent;
-  // font: 400 rem(17)/1.41 $raleway !important;
-  // color: $black;
+  border: rem(2) solid $white;
+  background-color: $white;
+  font: 400 rem(20)/1.3 $ptsans !important;
+  color: $white;
   transition: all .4s ease;
 
   &:active,
   &:focus {
     outline: none;
-    // border-color: $coral;
+    border-color: $gray;
   }
 }
 
@@ -62,7 +62,7 @@ input[type="radio"] {
     left: 0;
     width: rem(30);
     height: rem(30);
-    // border: rem(2) solid $blue;
+    border: rem(2) solid $white;
     background-color: transparent;
     transition: all .4s ease;
   }
@@ -88,14 +88,14 @@ input[type="radio"] {
   }
 
   &:checked:after {
-    // color: $blue;
+    color: $gray;
   }
 
   &:focus, &:active {
     outline: none;
 
     &:before {
-      // border-color: $coral;
+      border-color: $gray;
     }
   }
 }
@@ -130,7 +130,7 @@ input[type="radio"] {
 // Submit Button
 input[type="submit"] {
   width: auto !important;
-  // @include buttons($primary, $primary, $white, $primary, transparent, $primary);
+  @include buttons($white, transparent, $white, $white, $white, $primary);
 
   &:active,
   &:focus,
@@ -180,7 +180,7 @@ input[type="submit"] {
         font-weight: 400;
         content: '\f107';
         font-size: rem(32);
-        // color: $blue;
+        color: $gray;
         pointer-events: none;
       }
     }

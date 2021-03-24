@@ -7,8 +7,13 @@
 
 // 3-Column Grid Custom Fields
 $intro = get_sub_field('3_column_grid_intro_content');
-$bgColor = get_sub_field('3_column_background_color');
-$bgImage = wp_get_attachment_image_src(get_sub_field('3_column_background_image'), 'hero');
+$bgColor = get_sub_field('3_column_grid_background_color');
+$bgImage = wp_get_attachment_image_src(get_sub_field('3_column_grid_background_image'), 'hero');
+$lineClass = count(get_sub_field('3_column_grid')) > 2 ? ' three-column-grid__separator' : '';
+$mainbtnToggle = get_sub_field('3_column_grid_button_toggle');
+$mainbtnAlign = get_sub_field('3_column_grid_button_alignment');
+$mainbtnClass = get_sub_field('3_column_grid_button_class');
+$mainbtn = get_sub_field('3_column_grid_button');
 
 if( have_rows('3_column_grid') ) : ?>
 
@@ -29,7 +34,7 @@ if( have_rows('3_column_grid') ) : ?>
           $btnClass = get_sub_field('button_class');
           $btn = get_sub_field('button'); ?>
 
-          <div class="col-4 md-col-5 sm-col-10 stretch three-column-grid__separator">
+          <div class="col-4 md-col-5 sm-col-10 stretch <?php echo $lineClass; ?>">
             <div class="three-column-grid__column">
               <div>
 
@@ -59,6 +64,18 @@ if( have_rows('3_column_grid') ) : ?>
         <?php endwhile; ?>
 
       </div>
+
+        <?php // Optional button
+        if( $mainbtnToggle && $mainbtn ) : ?>
+
+        <div class="text-<?php echo $mainbtnAlign; ?> sm-text-center">
+          <a href="<?php echo esc_url($mainbtn['url']); ?>" class="button button--<?php echo $mainbtnClass; ?>" role="link" title="<?php echo $mainbtn['title']; ?>" target="<?php echo $mainbtn['target']; ?>">
+            <?php echo $mainbtn['title']; ?>
+          </a>
+        </div>
+
+      <?php endif; ?>
+
     </div>
   </section>
 

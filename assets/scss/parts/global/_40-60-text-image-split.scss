@@ -1,0 +1,30 @@
+/*
+ * 40/60 Text/Image Split (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.forty-sixty-text-image-split {
+  @include iPhoneX;
+  position: relative;
+
+  .container {
+    padding: rem(70) 0;
+    margin-top: rem(70);
+  }
+
+  &__image img {
+    position: absolute;
+    bottom: rem(-70);
+  }
+
+}
+
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .forty-sixty-text-image-split__image img {
+    position: relative;
+    bottom: rem(-80);
+  }
+}

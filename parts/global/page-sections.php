@@ -23,6 +23,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/text-image-split');
 
+  elseif( get_row_layout() == 'forty_sixty_text_image_split' ) :
+
+    get_template_part('parts/global/40-60-text-image-split');
+
   elseif( get_row_layout() == '3_column_grid' ) :
 
     get_template_part('parts/global/3-column-grid');
@@ -30,6 +34,18 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
   elseif( get_row_layout() == 'newsletter_signup' ) :
 
     get_template_part('parts/global/newsletter-signup');
+
+  elseif( get_row_layout() == 'carousel' ) :
+
+    get_template_part('parts/global/carousel');
+
+  elseif( get_row_layout() == '3_image_section' ) :
+
+    get_template_part('parts/global/3-image-section');
+
+  elseif( get_row_layout() == 'testimonial_slider' ) :
+
+    get_template_part('parts/global/testimonial-slider');
 
   endif;
 

@@ -204,6 +204,12 @@
         'classes' => 'cursive-heading',
   			'wrapper' => false,
       ),
+      array(
+        'title' => 'Big heading (Bentham)',
+  			'block' => 'h2',
+        'classes' => 'big-header',
+  			'wrapper' => false,
+      ),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats_merge'] = true;
