@@ -71,7 +71,7 @@ $(document).ready(function() {
       autoplay: false,
       arrows: true,
       dots: false,
-      slidesToShow: 3,
+      slidesToShow: 2,
       responsive: [
         {
           breakpoint: 1024,
@@ -88,4 +88,17 @@ $(document).ready(function() {
       ]
     });
   }
+
+
+  // Carousel slider
+  if ($(".carousel__container .carousel__slide").length) {
+    $(".carousel__container").slick({
+      arrows: true,
+      dots: true,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    });
+  }
+
 });

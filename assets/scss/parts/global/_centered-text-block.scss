@@ -8,7 +8,7 @@
   @include iPhoneX;
 
   .container {
-    padding: rem(50) 0;
+    padding: rem(80) 0;
   }
 
   &__featured-image {
@@ -18,5 +18,12 @@
 
   .buttons {
     margin-top: rem(30);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .centered-text-block .container {
+    padding: rem(60) rem(30);
   }
 }

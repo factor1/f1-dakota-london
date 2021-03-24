@@ -2,9 +2,14 @@
   Footer
 ------------------------------------------------------------------------------*/
 .site-footer {
+  
+  li, ol, p, ul {
+    font-size: rem(16);
+  }
+
   &__top {
     @include iPhoneX;
-    // background-color: $red;
+    background-color: $black;
 
     .container {
       padding: rem(30) 0;
@@ -13,18 +18,24 @@
     .col-12 {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
   }
 
   &__logo {
     width: rem(250);
+    margin: 0 auto;
+  }
+
+  &__content , &__copyright {
+    color: $white;
+    margin: rem(40) 0 0;
   }
 
   &__main {
     @include iPhoneX;
-    // background-color: $black;
+    background-color: $black;
 
     .container {
       padding: rem(85) 0;
@@ -35,8 +46,13 @@
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .site-footer {
-    &__top .col-12 {
-      justify-content: center;
+    &__top {
+      .container {
+        padding: rem(30);
+      }
+      .col-12 {
+        justify-content: center;
+      }
     }
 
     &__logo {
@@ -44,7 +60,7 @@
 
       a {
         display: block;
-        width: rem(100);
+        width: rem(250);
         margin: 0 auto rem(15);
       }
     }

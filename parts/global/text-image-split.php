@@ -10,6 +10,7 @@ $layoutOption = get_sub_field('text_image_split_layout_option'); // img on left 
 $widthOption = get_sub_field('text_image_split_width_option'); // T/F full-width section
 $marginOption = get_sub_field('text_image_split_margin_option'); // margin above & below section
 $bgColor = get_sub_field('text_image_split_background_color');
+$bgText = get_sub_field('text_image_split_background_text');
 $img = wp_get_attachment_image_src(get_sub_field('text_image_split_image'), 'text_image_split');
 $content = get_sub_field('text_image_split_content');
 $btnToggle = get_sub_field('text_image_split_button_toggle');
@@ -44,6 +45,11 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
           <?php endif; ?>
 
         </div>
+        <?php if($bgText): ?>
+          <div class="backtext">
+            <?php echo $bgText; ?>
+          </div>
+        <?php endif; ?>
       </div>
 
 

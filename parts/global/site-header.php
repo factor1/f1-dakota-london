@@ -4,7 +4,7 @@
  */
 
 // Site Header Custom Fields
-$logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'logo');
+$logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'medium');
 ?>
 
 <header class="site-header">
@@ -16,15 +16,6 @@ $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'logo');
         <a href="<?php echo esc_url(home_url()); ?>" class="site-header__logo">
           <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>">
         </a>
-
-        <?php // Primary menu
-        wp_nav_menu(
-          array(
-            'theme_location' => 'primary',
-            'container' => 'nav',
-            'container_class' => 'nav--primary lg-only',
-          )
-        ); ?>
 
         <?php // Mobile nav button ?>
         <button class="menu-icon"><span></span></button>

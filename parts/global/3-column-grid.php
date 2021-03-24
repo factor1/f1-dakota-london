@@ -7,15 +7,25 @@
 
 // 3-Column Grid Custom Fields
 $intro = get_sub_field('3_column_grid_intro_content');
+$bgColor = get_sub_field('3_column_grid_background_color');
+$bgText = get_sub_field('3_column_grid_background_text');
+$lineClass = ( count(get_sub_field('3_column_grid')) > 2 && $bgColor == '#000000' ) ? ' three-column-grid__separator' : '';
+$mainbtnToggle = get_sub_field('3_column_grid_button_toggle');
+$mainbtnAlign = get_sub_field('3_column_grid_button_alignment');
+$mainbtnClass = get_sub_field('3_column_grid_button_class');
+$mainbtn = get_sub_field('3_column_grid_button');
 
 if( have_rows('3_column_grid') ) : ?>
 
-  <section class="three-column-grid">
+  <section class="three-column-grid" style="background: <?php echo $bgColor; ?>;">
     <div class="container">
       <div class="row row--justify-content-center">
-        <div class="col-12">
-          <?php echo $intro; ?>
-        </div>
+
+        <?php if($intro): ?>
+          <div class="col-12">
+            <?php echo $intro; ?>
+          </div>
+        <?php endif; ?>
 
         <?php while( have_rows('3_column_grid') ) : the_row();
           $img = wp_get_attachment_image_src(get_sub_field('image'), '');
@@ -24,12 +34,12 @@ if( have_rows('3_column_grid') ) : ?>
           $btnClass = get_sub_field('button_class');
           $btn = get_sub_field('button'); ?>
 
-          <div class="col-4 md-col-5 sm-col-10 stretch">
+          <div class="col-4 md-col-5 sm-col-10 stretch <?php echo $lineClass; ?>">
             <div class="three-column-grid__column">
               <div>
 
                 <?php if( $img ) : ?>
-                  <div class="three-column-grid__img" style="background: url('<?php echo $img[0]; ?>') center/cover no-repeat"></div>
+                  <div class="three-column-grid__img" style="background: url('<?php echo $img[0]; ?>') center/contain no-repeat"></div>
                 <?php endif; ?>
 
                 <div class="three-column-grid__text">
@@ -54,7 +64,24 @@ if( have_rows('3_column_grid') ) : ?>
         <?php endwhile; ?>
 
       </div>
+
+        <?php // Optional button
+        if( $mainbtnToggle && $mainbtn ) : ?>
+
+        <div class="text-<?php echo $mainbtnAlign; ?> sm-text-center">
+          <a href="<?php echo esc_url($mainbtn['url']); ?>" class="button button--<?php echo $mainbtnClass; ?>" role="link" title="<?php echo $mainbtn['title']; ?>" target="<?php echo $mainbtn['target']; ?>">
+            <?php echo $mainbtn['title']; ?>
+          </a>
+        </div>
+
+      <?php endif; ?>
+
     </div>
+    <?php if($bgText): ?>
+      <div class="backtext">
+        <?php echo $bgText; ?>
+      </div>
+    <?php endif; ?>
   </section>
 
 <?php endif; ?>

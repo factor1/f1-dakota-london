@@ -6,8 +6,8 @@ label {
   position: relative;
   left: rem(20);
   padding-right: rem(30) !important;
-  // font: 400 rem(17)/1.41 $raleway !important;
-  // color: $black;
+  font: 500 rem(20)/1.3 $bentham !important;
+  color: $white;
   z-index: 1;
 }
 
@@ -16,17 +16,17 @@ textarea,
 select {
   width: 100% !important;
   padding: rem(20) !important;
-  border-radius: rem(4) !important;
-  // border: rem(2) solid $blue;
-  background-color: transparent;
-  // font: 400 rem(17)/1.41 $raleway !important;
-  // color: $black;
+  border-radius: rem(2) !important;
+  border: rem(2) solid $white;
+  background-color: $white;
+  font: 400 rem(20)/1.3 $ptsans !important;
+  color: $white;
   transition: all .4s ease;
 
   &:active,
   &:focus {
     outline: none;
-    // border-color: $coral;
+    border-color: $gray;
   }
 }
 
@@ -62,7 +62,7 @@ input[type="radio"] {
     left: 0;
     width: rem(30);
     height: rem(30);
-    // border: rem(2) solid $blue;
+    border: rem(2) solid $white;
     background-color: transparent;
     transition: all .4s ease;
   }
@@ -88,14 +88,14 @@ input[type="radio"] {
   }
 
   &:checked:after {
-    // color: $blue;
+    color: $gray;
   }
 
   &:focus, &:active {
     outline: none;
 
     &:before {
-      // border-color: $coral;
+      border-color: $gray;
     }
   }
 }
@@ -127,10 +127,15 @@ input[type="radio"] {
   }
 }
 
+//file upload
+.ginput_container_fileupload input {
+  color: $white;
+}
+
 // Submit Button
 input[type="submit"] {
   width: auto !important;
-  // @include buttons($primary, $primary, $white, $primary, transparent, $primary);
+  @include buttons($white, transparent, $white, $white, $white, $primary);
 
   &:active,
   &:focus,
@@ -180,7 +185,7 @@ input[type="submit"] {
         font-weight: 400;
         content: '\f107';
         font-size: rem(32);
-        // color: $blue;
+        color: $gray;
         pointer-events: none;
       }
     }
@@ -198,6 +203,7 @@ input[type="submit"] {
     .gform_footer {
       margin: 0 !important;
       padding: 0 !important;
+      text-align: center;
     }
 
     // Active Styles
@@ -226,6 +232,33 @@ input[type="submit"] {
         }
       }
     }
+  }
+
+  .top_label input.medium {
+    width: 100% !important;
+  }
+
+  // file input
+  input[type=file].medium {
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+
+    &::before {
+      content: 'File';
+      display: inline-block;
+      @include buttons($white, transparent, $white, $white, $white, $primary);
+    }
+
+    &:hover::before {
+      background-color: $white;
+      color: $black;
+    }
+
+    &:active::before {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+
   }
 
   // Errors
@@ -269,5 +302,11 @@ input[type="submit"] {
     .half-width {
       flex-basis: 100%;
     }
+  }
+
+  .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit] {
+    width: 100% !important;
+    max-width: rem(270);
+    margin-top: rem(30) !important;
   }
 }
