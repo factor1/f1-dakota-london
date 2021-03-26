@@ -1,0 +1,49 @@
+/*
+ * Price table (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.price-tables {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  &__column {
+    border: rem(2) solid $black;
+    background-color: $white;
+    max-width: rem(300);
+    margin: 0 auto rem(50);
+    text-align: center;
+
+    .column_head {
+      background-color: $black;
+      padding: rem(10);
+      h3 {
+        color: $white;
+        margin: 0;
+      }
+    }
+
+    .column_price {
+      background-color: $Gray-lightest;
+      padding: rem(10) 0;
+      .discounted {
+        font: 500 rem(35)/1.3 $bentham;
+        color: $green;
+      }
+    }
+
+    .column_repeater {
+      padding: rem(20) 0;
+      .repeater-item {
+        padding: rem(10) 0;
+      }
+    }
+
+  }
+
+
+}
