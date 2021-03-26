@@ -170,6 +170,7 @@
     $custom_colors = '
         "020000", "Black",
         "FFFFFF", "White",
+        "707070", "Gray"
     ';
 
     // build colour grid default+custom colors
@@ -208,6 +209,12 @@
         'title' => 'Big heading (Bentham)',
   			'block' => 'h2',
         'classes' => 'big-header',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Big heading (Coursive)',
+  			'block' => 'h2',
+        'classes' => 'big-coursive-heading',
   			'wrapper' => false,
       ),
     );

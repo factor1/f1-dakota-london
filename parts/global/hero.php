@@ -14,9 +14,10 @@ $colAlign = get_field('hero_column_alignment');
 $videoToggle = get_field('hero_video_toggle');
 $video = get_field('hero_video');
 $content = get_field('hero_content');
+$empty_class = $content == '' ? ' empty-hero' : '';
 $btnAlign = get_field('hero_button_alignment'); // left, center, or right ?>
 
-<section class="hero" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat">
+<section class="hero <?php echo $empty_class; ?>" style="background: url('<?php echo $bg[0]; ?>') <?php echo $hAlign . ' ' . $vAlign; ?>/cover no-repeat">
 
   <?php // Optional bg video
   if( $videoToggle && $video ) : ?>

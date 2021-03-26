@@ -39,11 +39,40 @@
     .column_repeater {
       padding: rem(20) 0;
       .repeater-item {
-        padding: rem(10) 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(15) 0;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          display: block;
+          width: 80%;
+          height: rem(2);
+          background-color: $Gray-lightest;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+          &:after {
+            display: none;
+          }
+        }
       }
     }
 
+    .button {
+      margin: rem(10) 0 rem(30);
+    }
   }
+}
 
-
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .price-tables__column .column_repeater .repeater-item {
+    font-size: rem(16);
+  }
 }
