@@ -5,6 +5,8 @@
  */
 
 .text-image-split {
+  overflow: hidden;
+  
   &.with-margin {
     margin-top: rem(80);
     margin-bottom: rem(80);
