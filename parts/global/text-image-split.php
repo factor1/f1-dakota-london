@@ -33,16 +33,24 @@ $rowClass2 = $widthOption ? ' row--full-width' : ''; ?>
 
           <?php echo $content;
 
-          // Optional button
-          if( $btnToggle && $btn ) : ?>
+        // Optional buttons
+        if( have_rows('text_image_split_buttons') ) : ?>
 
-            <div class="text-<?php echo $btnAlign; ?> sm-text-center">
+          <div class="buttons text-<?php echo $btnAlign; ?>">
+
+            <?php while( have_rows('text_image_split_buttons') ) : the_row();
+              $btnClass = get_sub_field('button_class');
+              $btn = get_sub_field('button'); ?>
+
               <a href="<?php echo esc_url($btn['url']); ?>" class="button button--<?php echo $btnClass; ?>" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
                 <?php echo $btn['title']; ?>
               </a>
-            </div>
 
-          <?php endif; ?>
+            <?php endwhile; ?>
+
+          </div>
+
+        <?php endif; ?>
 
         </div>
         <?php if($bgText): ?>

@@ -47,6 +47,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/testimonial-slider');
 
+  elseif( get_row_layout() == 'price_tables' ) :
+
+    get_template_part('parts/global/price-tables');
+
   endif;
 
 endwhile; endif; ?>

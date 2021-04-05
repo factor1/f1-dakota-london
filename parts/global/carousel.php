@@ -9,8 +9,9 @@
 $bgImage = wp_get_attachment_image_src(get_sub_field('carousel_background_image'), 'large');
 $intro_content = get_sub_field('carousel_intro_content');
 $slides = get_sub_field('carousel_slider');
+$home_class = (is_home() || is_front_page()) ? ' home-carousel' : '';
 ?>
-<section class="carousel" style="background: url(<?php echo $bgImage[0]; ?>) center/cover">
+<section class="carousel <?php echo $home_class; ?>" style="background: url(<?php echo $bgImage[0]; ?>) center/cover">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -24,6 +25,7 @@ $slides = get_sub_field('carousel_slider');
             $btnAlign = get_sub_field('slide_button_alignment'); 
           ?>
             <section class="carousel__slide">
+            <!-- <section class="carousel__slide" style="background: url(<?php echo $bg[0]; ?>) top/cover;"> -->
               <?php echo $intro_content; ?>
               <img src="<?php echo $bg[0]; ?>" alt="">
 

@@ -9,6 +9,10 @@
   @include iPhoneX;
   overflow: hidden;
 
+  &.empty-hero .container {
+    padding: 25% 0;
+  }
+
   // Hero video
   &__video {
     position: absolute;
@@ -39,7 +43,7 @@
   }
 
   .button {
-    // margin: rem(20);
+    margin: rem(20);
   }
 
   &:after {
@@ -49,7 +53,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: rgba($black, 0.35);
   }
 }
 
