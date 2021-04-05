@@ -241,12 +241,12 @@
         position: relative;
         font: 400 17px/1.41 "Raleway", sans-serif;
         color: #020000;
-        background-color: #314556;
+        background-color: #000;
       }
       .login .message,
       .login #login_error {
         margin-top: 30px;
-        border-color: #f26b57;
+        border-color: #ff0000;
       }
       .login p,
       .login p a,
@@ -256,11 +256,11 @@
       }
       #login form p,
       #login form label {
-        color: #314556 !important;
+        color: #000 !important;
       }
       .login p a:hover,
       .login .privacy-policy-link:hover {
-        color: #f26b57 !important;
+        color: #ff0000 !important;
       }
       .login input[type="text"]:active,
       .login input[type="text"]:focus,
@@ -284,15 +284,15 @@
       input[type=number]:focus,
       select:focus,
       textarea:focus {
-        border-color: #f26b57;
+        border-color: #ff0000;
         box-shadow: 0 0 2px rgba(242, 107, 87, .6);
       }
       .login input[type="submit"] {
         display: inline-block;
         margin: 5px;
         padding: 15px;
-        border: 2px solid #f26b57;
-        background-color: #f26b57;
+        border: 2px solid #000;
+        background-color: #000;
         font: 400 15px/1 "Raleway", sans-serif;
         color: #fff;
         text-align: center;
@@ -305,9 +305,9 @@
       }
       .login input[type="submit"]:focus,
       .login input[type="submit"]:hover {
-        border-color: #f26b57;
+        border-color: #000;
         background-color: transparent;
-        color: #f26b57;
+        color: #000;
       }
     	h1 a {
     		height: 100% !important;
@@ -323,7 +323,7 @@
       }
   	</style>';
   }
-  // add_action('login_head', 'custom_loginlogo');
+  add_action('login_head', 'custom_loginlogo');
 
   // add custom footer text
   function modify_footer_admin () {

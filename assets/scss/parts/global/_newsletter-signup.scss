@@ -20,14 +20,14 @@
       input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="url"],
       textarea,
       select {
-        // height: rem(62);
+        height: rem(62);
         padding-right: rem(175) !important;
         border-radius: rem(17) !important;
-        // border-color: $white;
+        border-color: $white;
 
         &:active,
         &:focus {
-          // border-color: $red;
+          border-color: $red;
         }
       }
 
@@ -43,7 +43,7 @@
       input[type="submit"] {
         margin: 0 !important;
         min-width: rem(150);
-        // height: rem(62);
+        height: rem(62);
         padding-top: rem(15);
         padding-bottom: rem(15);
         border-top-right-radius: rem(17) !important;

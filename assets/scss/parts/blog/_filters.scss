@@ -7,7 +7,7 @@
 .index--filters {
   position: relative;
   @include iPhoneX;
-  // background-color: $offWhite;
+  background-color: transparent;
 
   .container {
     padding: rem(15) 0;
