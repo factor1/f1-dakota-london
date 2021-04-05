@@ -5,9 +5,11 @@
  */
 
 .text-image-split {
+  overflow: hidden;
+  
   &.with-margin {
-    margin-top: rem(30);
-    margin-bottom: rem(30);
+    margin-top: rem(80);
+    margin-bottom: rem(80);
   }
 
   .row--reverse .text-image-split__text {
@@ -19,6 +21,7 @@
     min-height: 50vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: rem(700);
     padding-top: rem(80);
     padding-bottom: rem(30);
@@ -37,9 +40,13 @@
       z-index: 1;
       position: absolute;
       width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font: 500 rem(180)/1.3 $margo;
       color: #353535;
-      margin-bottom: 10%;
+      margin-bottom: 25%;
     }
 
   }
@@ -82,7 +89,6 @@
   .text-image-split__text .backtext {
     left: 0;
     font-size: rem(100);
-    top: rem(40);
   }
 
 }

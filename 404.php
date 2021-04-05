@@ -9,4 +9,6 @@ get_header();
 
 get_template_part('parts/global/centered-text-block');
 
+get_template_part('parts/global/banner');
+
 get_footer(); ?>

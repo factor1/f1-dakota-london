@@ -26,6 +26,17 @@
 
 
 // Media Queries
+@media screen and (max-width: rem(1200)) {
+  .forty-sixty-text-image-split .container {
+    padding: rem(40) 0;
+  }
+
+  .forty-sixty-text-image-split__image img {
+    bottom: rem(-40);
+  }
+}
+
+
 @media screen and (max-width: $small-breakpoint) {
 
   .forty-sixty-text-image-split {

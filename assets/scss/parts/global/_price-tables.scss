@@ -1,0 +1,78 @@
+/*
+ * Price table (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.price-tables {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  &__column {
+    border: rem(2) solid $black;
+    background-color: $white;
+    max-width: rem(300);
+    margin: 0 auto rem(50);
+    text-align: center;
+
+    .column_head {
+      background-color: $black;
+      padding: rem(10);
+      h3 {
+        color: $white;
+        margin: 0;
+      }
+    }
+
+    .column_price {
+      background-color: $Gray-lightest;
+      padding: rem(10) 0;
+      .discounted {
+        font: 500 rem(35)/1.3 $bentham;
+        color: $green;
+      }
+    }
+
+    .column_repeater {
+      padding: rem(20) 0;
+      .repeater-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(15) 0;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          display: block;
+          width: 80%;
+          height: rem(2);
+          background-color: $Gray-lightest;
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .button {
+      margin: rem(10) 0 rem(30);
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .price-tables__column .column_repeater .repeater-item {
+    font-size: rem(16);
+  }
+}
