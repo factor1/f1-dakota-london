@@ -1,0 +1,24 @@
+/*
+ * 50/50 Text Split (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.text-split {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .col-12 {
+    margin-top: rem(50);
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .text-split .container {
+    padding: rem(60) rem(30);
+  }
+}
