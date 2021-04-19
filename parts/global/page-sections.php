@@ -23,6 +23,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/text-image-split');
 
+  elseif( get_row_layout() == 'text_split' ) :
+
+    get_template_part('parts/global/text-split');
+
   elseif( get_row_layout() == 'forty_sixty_text_image_split' ) :
 
     get_template_part('parts/global/40-60-text-image-split');
