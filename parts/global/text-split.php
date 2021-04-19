@@ -5,7 +5,9 @@
  * Template part used on various templates/views
  */
 
- // 50/50 text split Custom Fields
+// 50/50 text split Custom Fields
+$background_color = get_sub_field('text_split_background_color');
+$background_image = wp_get_attachment_image_src(get_sub_field('text_split_background_image'), 'full');
 $left_content = get_sub_field('text_split_left_content');
 $right_content = get_sub_field('text_split_right_content');
 $btnToggle = get_sub_field('text_split_button_toggle');
@@ -14,7 +16,7 @@ $btnClass = get_sub_field('text_split_button_class');
 $btn = get_sub_field('text_split_button');
 ?>
 
-<section class="text-split">
+<section class="text-split" style="background: <?php echo $background_color; ?> url(<?php echo $background_image[0]; ?>) center/cover;">
   <div class="container">
     <div class="row row--justify-content-center">
 
