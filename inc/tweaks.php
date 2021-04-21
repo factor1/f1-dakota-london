@@ -200,6 +200,12 @@
   			'wrapper' => false,
       ),
       array(
+        'title' => 'Hero Banner heading',
+  			'block' => 'h2',
+        'classes' => 'hero-banner-heading',
+  			'wrapper' => false,
+      ),
+      array(
         'title' => 'Cursive heading',
   			'block' => 'h2',
         'classes' => 'cursive-heading',

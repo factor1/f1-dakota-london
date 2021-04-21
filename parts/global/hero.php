@@ -11,16 +11,30 @@ $bgColor = get_field('hero_background_color');
 $videoToggle = get_field('hero_video_toggle');
 $video = get_field('hero_video');
 $content = get_field('hero_content');
-$empty_class = $content == '' ? ' empty-hero' : '';
 $images_toggle = get_field('hero_images_toggle');
-$images = array_reverse(get_field('hero_images_repeater'));
-
-$col_size = $images_toggle ? 5 : 12;
-
+$images = get_field('hero_images_repeater');
 $banner_toggle = get_field('hero_banner_toggle');
 $left_content = get_field('hero_banner_left_content');
 $right_content = get_field('hero_banner_right_content');
 $btnAlign = get_field('hero_button_alignment');
+
+//extra container class
+$empty_class = '';
+$col_images = 7;
+$col_size = $images_toggle ? 5 : 10;
+
+if($images) {
+  $images = array_reverse($images);
+}
+
+if( $content == '' && !$images_toggle ) {
+  $empty_class = ' empty-hero';
+} elseif ( $content == '' && $images_toggle ) {
+  $empty_class = ' no-images';
+  $col_images = 10;
+} elseif ( $content != '' && !$images_toggle) {
+  $empty_class = ' no-images';
+}
 
 ?>
 
@@ -47,7 +61,7 @@ $btnAlign = get_field('hero_button_alignment');
 
       <?php if($images_toggle): ?>
 
-        <div class="col-7" data-aos="fade-up">
+        <div class="col-<?php echo $col_images; ?>" data-aos="fade-up">
 
           <?php if($images) : ?>
 
@@ -71,15 +85,17 @@ $btnAlign = get_field('hero_button_alignment');
 
   <?php if($banner_toggle): ?>
 
-    <div class="container hero__banner" style="background-color: <?php echo $bgColor; ?> ;">
-      <div class="row">
-        <div class="col-6">
+    <div class="container hero-banner" style="background-color: <?php echo $bgColor; ?> ;">
+      <div class="row row--justify-content-center row--align-items-center">
+        <div class="col-5 sm-text-center">
           <?php echo $left_content; ?>
         </div>
-        <div class="col-6">
+        <div class="col-5 sm-text-center">
           <?php echo $right_content; ?>
         </div>
-        <div class="col-12">
+      </div>
+      <div class="row row--justify-content-center">
+        <div class="col-10">
 
           <?php if( have_rows('hero_buttons') ) : ?>
 
