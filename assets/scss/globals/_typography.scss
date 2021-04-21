@@ -62,13 +62,19 @@ a {
 
 // Typography classes
 .main-hero-heading { //h1
-  font: 500 rem(100)/1.2 $bentham;
+  font: 500 rem(85)/1.2 $bentham;
   text-shadow: 0 rem(5) rem(5) $black;
 }
 
 .main-hero-subheading { //h2
-  font: 500 rem(50)/1.2 $ptsans;
+  font: 500 rem(40)/1.2 $ptsans;
   text-shadow: 0 rem(5) rem(5) $black;
+}
+
+.hero-banner-heading { //h2
+  font: 100 rem(45)/1.2 $bentham;
+  text-shadow: 0 rem(5) rem(5) $black;
+  margin: 0;
 }
 
 .big-header {//h2
@@ -101,6 +107,18 @@ a {
 @media screen and (max-width: $medium-breakpoint) {
   .big-coursive-heading {
     font-size: rem(100);
+  }
+
+  .main-hero-heading {
+    font-size: rem(65);
+  }
+
+  .main-hero-subheading {
+    font-size: rem(30);
+  }
+  
+  .hero-banner-heading { //h2
+    font-size: rem(30);
   }
 }
 
@@ -138,10 +156,16 @@ a {
   }
 
   .main-hero-heading {
-    font-size: rem(30);
+    font-size: rem(65);
+    text-align: center !important;
   }
 
   .main-hero-subheading {
+    font-size: rem(30);
+    text-align: center !important;
+  }
+  
+  .hero-banner-heading { //h2
     font-size: rem(30);
   }
 
