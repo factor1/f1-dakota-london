@@ -7,3 +7,20 @@
 .sbi_info {
   display: none !important;
 }
+
+
+// Gallery
+ul.go-gallery-filters li a {
+  border: solid rem(2) $black !important;
+  color: $white !important;
+  padding: rem(10) rem(25) !important;
+  margin-bottom: rem(15) !important;
+  font: 400 rem(20)/1 'PT Sans', sans-serif !important;
+  text-transform: uppercase;
+}
+
+ul.go-gallery-filters li a:hover {
+  background-color: transparent !important;
+  border-color: $black !important;
+  color: $black !important;
+}
