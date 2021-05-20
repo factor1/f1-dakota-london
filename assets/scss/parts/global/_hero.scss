@@ -9,8 +9,11 @@
   @include iPhoneX;
   overflow: hidden;
 
-  &.empty-hero .container {
-    padding: 28% 0;
+  &.empty-hero {
+    overflow: visible;
+    .container {
+      padding: 46% 0 9%;
+    }
   }
 
   &.no-images .container {
@@ -130,7 +133,16 @@
   }
 
   .hero.empty-hero .container {
-    padding: 40% 0;
+    padding: 60% 0 0;
+  }
+
+  .empty-hero.sm-text-center {
+    margin-bottom: rem(-55);
+    .button--blue {
+      width: 90%;
+      padding: rem(20);
+      font-size: rem(20);
+    }
   }
 
   .hero .col-7 {

@@ -11,6 +11,10 @@ $bgColor = get_field('hero_background_color');
 $videoToggle = get_field('hero_video_toggle');
 $video = get_field('hero_video');
 $content = get_field('hero_content');
+$single_btn_toggle = get_field('hero_single_button_toggle');
+$single_btn_class = get_field('hero_single_button_class');
+$single_btn_alignment = get_field('hero_single_button_alignment');
+$single_btn = get_field('hero_single_button');
 $images_toggle = get_field('hero_images_toggle');
 $images = get_field('hero_images_repeater');
 $banner_toggle = get_field('hero_banner_toggle');
@@ -21,7 +25,7 @@ $btnAlign = get_field('hero_button_alignment');
 //extra container class
 $empty_class = '';
 $col_images = 7;
-$col_size = $images_toggle ? 5 : 10;
+$col_size = $images_toggle ? 5 : 12;
 
 if($images) {
   $images = array_reverse($images);
@@ -56,6 +60,14 @@ if( $content == '' && !$images_toggle ) {
       <div class="col-<?php echo $col_size; ?>" data-aos="fade-up">
 
         <?php echo $content; ?>
+
+        <?php if($single_btn_toggle && $single_btn): ?>
+          <div class="text-<?php echo $single_btn_alignment.$empty_class; ?> sm-text-center">
+            <a href="<?php echo esc_url($single_btn['url']); ?>" class="button button--<?php echo $single_btn_class; ?>" role="link" title="<?php echo $single_btn['title']; ?>" target="<?php echo $single_btn['target']; ?>">
+              <?php echo $single_btn['title']; ?>
+            </a>
+          </div>
+        <?php endif; ?>
 
       </div>
 
