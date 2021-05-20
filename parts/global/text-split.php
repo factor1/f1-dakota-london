@@ -23,13 +23,13 @@ $btn = get_sub_field('text_split_button');
     <div class="row row--justify-content-center">
 
       <?php if($left_content): ?>
-        <div class="col-5" style="background: <?php echo $left_background; ?>;">
+        <div class="col-6 stretch" style="background: <?php echo $left_background; ?>;">
           <?php echo $left_content; ?>
         </div>
       <?php endif; ?>
 
       <?php if($right_content): ?>
-        <div class="col-5" style="background: <?php echo $right_background; ?>;">
+        <div class="col-6 stretch" style="background: <?php echo $right_background; ?>;">
           <?php echo $right_content; ?>
         </div>
       <?php endif; ?>

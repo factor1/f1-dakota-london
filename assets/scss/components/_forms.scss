@@ -395,6 +395,10 @@ input[type="submit"] {
     }
   }
 
+  .gform_footer input[type=submit] {
+    min-width: 100%;
+  }
+
   .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit] {
     width: 100% !important;
     max-width: rem(270);
