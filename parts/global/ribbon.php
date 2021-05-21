@@ -19,14 +19,14 @@ $rowClass = $ribbon_layout_option == 'left' ? ' row--reverse' : '';
 <section class="ribbon" style="background: <?php echo $ribbon_background_color; ?>;" >
   <div class="container">
     <div class="row <?php echo $rowClass; ?> row--align-items-center row--justify-content-center">
-      <div class="col-2 sm-col-4 text-center ribbon__image">
-        <img src="<?php echo $ribbon_logo[0]; ?>" alt="<?php echo $ribbon_logo_alt; ?>">
-      </div>
       <?php if($ribbon_content): ?>
         <div class="col-4 sm-col-8 ribbon__content <?php echo $mobileOnly; ?>">
           <?php echo $ribbon_content; ?>
         </div>
       <?php endif; ?>
+      <div class="col-2 sm-col-4 text-center ribbon__image">
+        <img src="<?php echo $ribbon_logo[0]; ?>" alt="<?php echo $ribbon_logo_alt; ?>">
+      </div>
     </div>
   </div>
 </section>
