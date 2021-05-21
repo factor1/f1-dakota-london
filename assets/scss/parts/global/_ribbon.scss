@@ -1,0 +1,28 @@
+/*
+ * Ribbon (Global)
+ *
+ * Template part used on various templates/views
+ */
+
+.ribbon {
+  @include iPhoneX;
+
+  .container {
+    padding: rem(20) 0;
+  }
+
+  &__content p {
+    margin: 0;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $medium-breakpoint) {
+  .ribbon .container {
+    padding: rem(60) 0 rem(20);
+  }
+
+  .ribbon__content p {
+    font-size: rem(16);
+  }
+}

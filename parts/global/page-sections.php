@@ -15,6 +15,10 @@ if( have_rows('page_sections') ) : while( have_rows('page_sections') ) : the_row
 
     get_template_part('parts/global/banner');
 
+  elseif( get_row_layout() == 'ribbon' ) :
+
+    get_template_part('parts/global/ribbon');
+
   elseif( get_row_layout() == 'slider' ) :
 
     get_template_part('parts/global/slider');
