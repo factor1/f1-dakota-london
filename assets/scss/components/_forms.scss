@@ -265,7 +265,7 @@ input[type="submit"] {
     }
 
     &::before {
-      content: 'File';
+      content: 'select image';
       display: inline-block;
       @include buttons($white, transparent, $white, $white, $white, $primary);
       max-width: rem(300);
@@ -328,7 +328,7 @@ input[type="submit"] {
       }
 
       &::before {
-        content: 'File';
+        content: 'select image';
         display: inline-block;
         @include buttons($black, transparent, $black, $black, $white, $white);
         max-width: rem(300);
@@ -385,6 +385,18 @@ input[type="submit"] {
 
 // Media Queries
 @media screen and (max-width: $small-breakpoint) {
+
+  input[type=file].medium {
+    &::-webkit-file-upload-button {
+      visibility: unset !important;
+    }
+
+    &::before {
+      display: none !important;
+    }
+
+  }
+
   .gform_wrapper form {
     .gfield {
       margin: 0 0 rem(20) !important;
@@ -403,5 +415,13 @@ input[type="submit"] {
     width: 100% !important;
     max-width: rem(270);
     margin-top: rem(30) !important;
+  }
+
+  .ginput_container_fileupload input {
+    font-size: rem(12);
+    display: block;
+  }
+  .gform_wrapper input[type=file].medium:before {
+    font-size: rem(12);
   }
 }
