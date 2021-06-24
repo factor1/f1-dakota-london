@@ -25,63 +25,62 @@ $mainbtn = get_sub_field('price_table_button');
       <?php endif; ?>
 
       <?php if( have_rows('price_tables') ) : ?>
+        <div class="price-tables__container">
+        
+          <?php while( have_rows('price_tables') ) : the_row();
+            $title = get_sub_field('table_title');
+            $price = get_sub_field('table_price');
+            $discounted_price = get_sub_field('table_discounted');
+            $parts = explode('.', (string)$discounted_price);
+            $part1 = $parts[0];
+            $part2 = $parts[1];
+            $btn = get_sub_field('table_link'); ?>
 
-        <?php while( have_rows('price_tables') ) : the_row();
-          $title = get_sub_field('table_title');
-          $price = get_sub_field('table_price');
-          $discounted_price = get_sub_field('table_discounted');
-          $parts = explode('.', (string)$discounted_price);
-          $part1 = $parts[0];
-          $part2 = $parts[1];
-          $btn = get_sub_field('table_link'); ?>
+              <div class="price-tables__column">
 
-          <div class="col-4 md-col-5 sm-col-10 stretch">
-            <div class="price-tables__column">
-
-              <div class="column_head">
-                <?php if( $title ) : ?>
-                  <h3><?php echo $title; ?></h3>
-                <?php endif; ?>
-              </div>
-
-              <div class="column_price">
-                <?php if( $discounted_price && $price ) : ?>
-                  <div class="discounted">
-                    <?php echo '$'.$parts[0]; ?> <sup><?php echo $parts[1]; ?></sup>
-                  </div>
-                  <div class="full">
-                    <s><?php echo '$'.$price; ?></s>
-                  </div>
-                <?php endif; ?>
-              </div>
-
-              <div class="column_repeater">
-                <?php if( have_rows('table_content_rows') ) : ?>
-
-                  <?php while( have_rows('table_content_rows') ) : the_row();
-                    $text = get_sub_field('row_text'); ?>
-                    <div class="repeater-item">
-                      <?php echo $text; ?>
-                    </div>  
-                  <?php endwhile; ?>
-
-                <?php endif; ?>
-              </div>
-
-              <?php if( $btn ) : ?>
-                <div class="text-center">
-                  <a href="<?php echo esc_url($btn['url']); ?>" class="button button--primary-ghost" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
-                    <?php echo $btn['title']; ?>
-                  </a>
+                <div class="column_head">
+                  <?php if( $title ) : ?>
+                    <h3><?php echo $title; ?></h3>
+                  <?php endif; ?>
                 </div>
-              <?php endif; ?>
 
-            </div>
-          </div>
+                <div class="column_price">
+                  <?php if( $discounted_price && $price ) : ?>
+                    <div class="discounted">
+                      <?php echo '$'.$parts[0]; ?> <sup><?php echo $parts[1]; ?></sup>
+                    </div>
+                    <div class="full">
+                      <s><?php echo '$'.$price; ?></s>
+                    </div>
+                  <?php endif; ?>
+                </div>
 
-        <?php endwhile; ?>
-      <?php endif; ?>
+                <div class="column_repeater">
+                  <?php if( have_rows('table_content_rows') ) : ?>
 
+                    <?php while( have_rows('table_content_rows') ) : the_row();
+                      $text = get_sub_field('row_text'); ?>
+                      <div class="repeater-item">
+                        <?php echo $text; ?>
+                      </div>  
+                    <?php endwhile; ?>
+
+                  <?php endif; ?>
+                </div>
+
+                <?php if( $btn ) : ?>
+                  <div class="text-center">
+                    <a href="<?php echo esc_url($btn['url']); ?>" class="button button--primary-ghost" role="link" title="<?php echo $btn['title']; ?>" target="<?php echo $btn['target']; ?>">
+                      <?php echo $btn['title']; ?>
+                    </a>
+                  </div>
+                <?php endif; ?>
+
+              </div>
+
+          <?php endwhile; ?>
+        <?php endif; ?>
+      </div>
 
     </div>
 

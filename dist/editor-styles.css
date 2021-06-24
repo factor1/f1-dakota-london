@@ -79,3 +79,7 @@ a {
   margin: 15px 0 -15px;
   text-transform: unset;
 }
+
+.small-pt-heading {
+  font: 500 35px/1.3 'PT Sans', sans-serif;
+}
