@@ -30,11 +30,11 @@
     &:after {
       content: "";
       position: absolute;
-      top: 15%;
+      top: 25%;
       right: 0;
       display: block;
       width: rem(2);
-      height: 80%;
+      height: 65%;
       background-color: $gray-medium;
     }
 
@@ -68,7 +68,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: rem(15);
+        padding: 0 rem(15);
         position: relative;
       }
     }
