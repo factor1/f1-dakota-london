@@ -24,3 +24,26 @@ ul.go-gallery-filters li a:hover {
   border-color: $black !important;
   color: $black !important;
 }
+
+// Sticky Bar
+.fbr-dark .fbr-button {
+  background-color: $white !important;
+  color: $black !important;
+  border-radius: 0 !important;
+  font: 400 rem(20)/1 'PT Sans', sans-serif !important;
+  text-transform: uppercase;
+  border: solid rem(2) $white !important;
+}
+
+.fbr-dark .fbr-button:hover {
+  background-color: transparent !important;
+  color: $white !important;
+}
+
+.fbr-dark .fbr-content {
+  background-color: $black !important;
+}
+
+.fbr-dark .fbr-toggle {
+  background-color: $black !important;
+}

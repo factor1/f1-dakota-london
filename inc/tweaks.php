@@ -223,6 +223,12 @@
         'classes' => 'big-coursive-heading',
   			'wrapper' => false,
       ),
+      array(
+        'title' => 'Medium Heading (PT Sans)',
+  			'block' => 'h3',
+        'classes' => 'small-pt-heading',
+  			'wrapper' => false,
+      ),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats_merge'] = true;

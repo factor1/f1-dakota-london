@@ -21,8 +21,17 @@
   &--white {
     @include buttons($white, $white, $primary, $white, transparent, $white);
   }
-
+  
   &--white-ghost {
     @include buttons($white, transparent, $white, $white, $white, $primary);
   }
+
+  &--blue {
+    @include buttons($blue, $blue, $white, $blue, $blue-dark, $white);
+    padding: rem(25) rem(40);
+    border-radius: rem(15);
+    font: 900 rem(20)/1 $ptsans;
+
+  }
+
 }

@@ -10,15 +10,24 @@
   .container {
     padding: rem(50) 0;
   }
+  
+  .col-6 {
+    padding: rem(50);
+  }
 
   .col-12 {
     margin-top: rem(50);
   }
+
 }
 
 // Media Queries
 @media screen and (max-width: $medium-breakpoint) {
   .text-split .container {
-    padding: rem(60) rem(30);
+    padding: 0;
+  }
+
+  .text-split .col-6 {
+    padding: rem(20);
   }
 }
