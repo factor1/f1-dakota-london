@@ -34,7 +34,7 @@ if( have_rows('3_column_grid') ) : ?>
           $btnClass = get_sub_field('button_class');
           $btn = get_sub_field('button'); ?>
 
-          <div class="col-4 md-col-5 sm-col-10 stretch <?php echo $lineClass; ?>">
+          <div class="col-4 md-col-4 sm-col-4 stretch <?php echo $lineClass; ?>">
             <div class="three-column-grid__column">
               <div>
 
