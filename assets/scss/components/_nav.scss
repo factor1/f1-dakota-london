@@ -25,10 +25,12 @@ nav {
 
 // Primary nav
 .nav--primary {
+  margin-top: rem(10);
   a {
     padding: rem(10);
     font: 400 rem(16)/1.19 $ptsans;
     color: $white;
+    text-transform: uppercase;
 
     &:hover {
       color: $gray-light;
@@ -81,12 +83,13 @@ nav {
     min-width: rem(200);
     width: 150%;
     padding: rem(15) 0;
-    background-color: $white;
+    background-color: $black;
     z-index: 99;
 
     a {
       padding: rem(10) rem(12);
       text-align: left;
+      text-transform: uppercase;
     }
   }
 }

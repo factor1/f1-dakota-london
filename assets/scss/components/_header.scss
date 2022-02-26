@@ -36,12 +36,12 @@ body {
   z-index: 9999;
 
   .container {
-    padding: rem(30) 0;
+    padding: rem(15) 0;
   }
 
   .col-12 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
@@ -50,6 +50,9 @@ body {
     margin: 0 auto;
     img {
       width: 100%;
+    }
+    &.lg-hide {
+      display: none;  
     }
   }
 }
@@ -69,6 +72,10 @@ body {
 
   .site-header__logo {
     width: rem(230);
-    margin: 0 0 0 rem(10);
+    margin: 0;
+
+    &.lg-hide {
+      display: flex;  
+    }
   }
 }
