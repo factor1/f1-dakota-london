@@ -6,7 +6,11 @@
  */
 
 // Hero Custom Fields
-$bg = wp_get_attachment_image_src(get_field('hero_background'), 'hero');
+$bg = wp_get_attachment_image_src(get_field('hero_background'), '');
+$height = get_field('hero_height');
+$hAlign = get_field('banner_horizontal_background_alignment');
+$vAlign = get_field('banner_vertical_background_alignment');
+$padding = get_field('banner_padding');
 $bgColor = get_field('hero_background_color');
 $videoToggle = get_field('hero_video_toggle');
 $video = get_field('hero_video');
@@ -42,7 +46,7 @@ if( $content == '' && !$images_toggle ) {
 
 ?>
 
-<section class="hero <?php echo $empty_class; ?>" style="background: <?php echo $bgColor; ?> url('<?php echo $bg[0]; ?>') center/cover no-repeat">
+<section class="hero <?php echo $empty_class; ?>" style="min-height:<?php echo $height; ?>vh; background: <?php echo $bgColor; ?> url('<?php echo $bg[0]; ?>') <?php echo $vAlign;?>  <?php echo $hAlign; ?> /cover no-repeat">
 
   <?php // Optional bg video
   if( $videoToggle && $video ) : ?>
@@ -56,9 +60,12 @@ if( $content == '' && !$images_toggle ) {
   <?php endif; ?>
 
   <div class="container">
-    <div class="row row--justify-content-center">
-      <div class="col-<?php echo $col_size; ?>" data-aos="fade-up">
-
+    <div class="row row--justify-content-center" style="padding:<?php echo $padding;?>px 0;">
+	    
+      <div class="col-<?php echo $col_size; ?>" data-aos="fade-up" >
+	  <div style="display:block;  height:1px; ">&nbsp;</div>
+	  
+	  	<style>hero h1 {text-shadow: 0px 0px 4px #000 !important}</style>
         <?php echo $content; ?>
 
         <?php if($single_btn_toggle && $single_btn): ?>
@@ -97,7 +104,7 @@ if( $content == '' && !$images_toggle ) {
 
   <?php if($banner_toggle): ?>
 
-    <div class="container hero-banner" style="background-color: <?php echo $bgColor; ?> ;">
+    <div class="container hero-banner" style="background-color: <?php echo $bgColor; ?> ; position: absolute; bottom:0px;">
       <div class="row row--justify-content-center row--align-items-center">
         <div class="col-5 sm-text-center">
           <?php echo $left_content; ?>
